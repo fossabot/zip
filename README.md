@@ -1,7 +1,7 @@
+![Bejo Logo](https://raw.githubusercontent.com/bejo-lang/media/main/logo-128x128.png)
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo?ref=badge_shield)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/3c04af6c37ef43ca958efd9cbed0e1df)](https://www.codacy.com/gh/bejo-lang/bejo/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bejo-lang/bejo&amp;utm_campaign=Badge_Grade)
-
-![Bejo Logo](https://raw.githubusercontent.com/bejo-lang/media/main/logo-128x128.png)
 
 A modern programming language from the future, just for fun.
 
@@ -184,7 +184,7 @@ by Bejo.
 
 ## Contributing
 
-Please make sure to read the [CONTRIBUTING-Guidelines](https://github.com/bejo-lang/bejo/blob/develop/CONTRIBUTING.md) before making a pull request.
+Please make sure to read the [CONTRIBUTING-Guidelines](https://github.com/bejo-lang/bejo/blob/main/CONTRIBUTING.md) before making a pull request.
 
 Thank you to all the people who already contributed to Bejo!
 
