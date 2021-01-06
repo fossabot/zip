@@ -5,7 +5,7 @@ Changing Bejo's syntax is a 3 step process:
 
 1. Update the parser to understand the new syntax
 2. Update the type checker so it can infer types of AST nodes parsed from the new syntax
-3. Update Erl translator to convert Bejo AST nodes to Erlang abstract format.
+3. Update Erl translator to convert the Bejo AST nodes to Erlang abstract format.
 
 These are explained below.
 
@@ -69,7 +69,7 @@ into Erlang abstract format.
 #### Documentation and Examples
 
 After you've made all the changes and updated the unit tests, the next job is
-to update the README and the examples in [the example file](https://github.com/bejo-lang/bejo/blob/main//example.bejo).
+to update the README and the examples in [the example file](https://github.com/bejo-lang/bejo/blob/main/example.bejo).
 
 The people who work on Bejo are friendly and eager to help. The best place to
 find them is in the Discord server linked in the README.
