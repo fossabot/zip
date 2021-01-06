@@ -1,4 +1,7 @@
-<img src="https://github.com/bejo-lang/assets/blob/main/logo.png?raw=true" width="150"/>
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo?ref=badge_shield)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3c04af6c37ef43ca958efd9cbed0e1df)](https://www.codacy.com/gh/bejo-lang/bejo/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bejo-lang/bejo&amp;utm_campaign=Badge_Grade)
+
+![Bejo Logo](https://raw.githubusercontent.com/bejo-lang/media/main/logo-128x128.png)
 
 A modern programming language from the future, just for fun.
 
@@ -17,8 +20,6 @@ A function in Bejo looks like this:
 
 ```elixir
 # example.bejo
-[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo?ref=badge_shield)
-
 fn sum(a: Int, b: Int) : Int do
   a + b
 end
@@ -181,6 +182,18 @@ mix escript.build
 Now open `http://localhost:6060` in the browser to see "Hello world" served
 by Bejo.
 
+## Contributing
+
+Please make sure to read the [CONTRIBUTING-Guidelines](https://github.com/bejo-lang/bejo/blob/develop/CONTRIBUTING.md) before making a pull request.
+
+Thank you to all the people who already contributed to Bejo!
+
+<a href="https://github.com/bejo-lang/bejo/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=bejo-lang/bejo" />
+</a>
 
 ## License
+
+Apache-2.0
+
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo?ref=badge_large)
