@@ -14,8 +14,14 @@ defmodule Bejo.MixProject do
       xref: [exclude: [:router]],
       elixirc_paths: elixirc_paths(Mix.env()),
       releases: [{@app, release()}],
-      preferred_cli_env: [release: :prod],
-      test_coverage: [tool: ExCoveralls]
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [
+        release: :prod,
+        coveralls: :test,
+        "coveralls.detail": :test,
+        "coveralls.post": :test,
+        "coveralls.html": :test
+      ]
     ]
   end
 
