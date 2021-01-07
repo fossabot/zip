@@ -3,7 +3,10 @@ defmodule Bejo.Compiler.CodeServer do
 
   require Logger
 
-  alias Bejo.Compiler.ModuleCompiler
+  alias Bejo.Compiler.{
+    ModuleCompiler,
+    ErlTranslate
+  }
 
   def start_link(_) do
     GenServer.start_link(__MODULE__, nil, name: __MODULE__)
@@ -124,7 +127,9 @@ defmodule Bejo.Compiler.CodeServer do
   def handle_call(:load, _from, state) do
     result =
       Enum.map(state.binaries, fn {module, file, binary} ->
-        case :code.load_binary(module, String.to_charlist(file), binary) do
+        module_name = ErlTranslate.erl_module_name(module)
+
+        case :code.load_binary(module_name, String.to_charlist(file), binary) do
           {:module, module} -> {:ok, module}
           {:error, _reason} -> {:error, module}
         end
@@ -205,7 +210,7 @@ defmodule Bejo.Compiler.CodeServer do
 
   defp default_functions do
     %{
-      kernel: insert_ok(Bejo.Kernel.types())
+      "bejo/kernel" => insert_ok(Bejo.Kernel.types())
     }
   end
 
