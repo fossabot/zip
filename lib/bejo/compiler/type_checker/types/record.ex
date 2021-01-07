@@ -1,7 +1,7 @@
-defmodule Bejo.Types.Record do
+defmodule Bejo.Compiler.TypeChecker.Types.Record do
   defstruct [:fields]
 
-  alias Bejo.Types, as: T
+  alias Bejo.Compiler.TypeChecker.Types, as: T
 
   defimpl String.Chars, for: T.Record do
     def to_string(%{fields: fields}) do

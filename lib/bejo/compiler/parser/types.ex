@@ -1,7 +1,7 @@
-defmodule Bejo.Parser.Types do
+defmodule Bejo.Compiler.Parser.Types do
   import NimbleParsec
 
-  alias Bejo.Parser.{Common, Helper}
+  alias Bejo.Compiler.Parser.{Common, Helper}
 
   allow_space = parsec({Common, :allow_space})
   identifier_str = parsec({Common, :identifier_str})

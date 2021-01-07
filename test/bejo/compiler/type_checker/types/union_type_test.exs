@@ -1,7 +1,7 @@
-defmodule Bejo.Types.UnionTypeTest do
+defmodule Bejo.Compiler.TypeChecker.Types.UnionTypeTest do
   use ExUnit.Case, async: true
 
-  alias Bejo.Types.Union
+  alias Bejo.Compiler.TypeChecker.Types.Union
 
   describe "new/1" do
     test "handles a flat list" do

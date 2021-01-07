@@ -14,7 +14,7 @@ defmodule Bejo.RouteStore do
   end
 
   def load_routes do
-    Bejo.Code.load_file("router.bejo")
+    Bejo.Code.load_module("router")
 
     if function_exported?(:router, :routes, 0) do
       routes = :router.routes()

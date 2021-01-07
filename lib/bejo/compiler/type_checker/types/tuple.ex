@@ -1,7 +1,7 @@
-defmodule Bejo.Types.Tuple do
+defmodule Bejo.Compiler.TypeChecker.Types.Tuple do
   defstruct elements: []
 
-  alias Bejo.Types, as: T
+  alias Bejo.Compiler.TypeChecker.Types, as: T
 
   defimpl String.Chars, for: T.Tuple do
     def to_string(%{elements: elements}) do

@@ -1,7 +1,7 @@
-defmodule Bejo.Types.FunctionRef do
+defmodule Bejo.Compiler.TypeChecker.Types.FunctionRef do
   defstruct [:return_type, arg_types: []]
 
-  alias Bejo.Types, as: T
+  alias Bejo.Compiler.TypeChecker.Types, as: T
 
   defimpl String.Chars, for: T.FunctionRef do
     def to_string(%{arg_types: arg_types, return_type: return_type}) do

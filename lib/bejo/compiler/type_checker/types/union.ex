@@ -1,4 +1,4 @@
-defmodule Bejo.Types.Union do
+defmodule Bejo.Compiler.TypeChecker.Types.Union do
   defstruct types: MapSet.new()
 
   @type t :: %__MODULE__{types: MapSet.t()}
@@ -22,7 +22,7 @@ defmodule Bejo.Types.Union do
     |> MapSet.new()
   end
 
-  defimpl String.Chars, for: Bejo.Types.Union do
+  defimpl String.Chars, for: Bejo.Compiler.TypeChecker.Types.Union do
     def to_string(%{types: types}) do
       Enum.join(types, " | ")
     end

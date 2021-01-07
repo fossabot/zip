@@ -1,7 +1,7 @@
-defmodule Bejo.Parser.NonLiteralExps do
+defmodule Bejo.Compiler.Parser.NonLiteralExps do
   import NimbleParsec
 
-  alias Bejo.Parser.{Common, Helper, Expressions}
+  alias Bejo.Compiler.Parser.{Common, Helper, Expressions}
 
   allow_space = parsec({Common, :allow_space})
   require_space = parsec({Common, :require_space})

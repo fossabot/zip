@@ -2,6 +2,7 @@
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fbejo-lang%2Fbejo?ref=badge_shield)
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/3c04af6c37ef43ca958efd9cbed0e1df)](https://www.codacy.com/gh/bejo-lang/bejo/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=bejo-lang/bejo&amp;utm_campaign=Badge_Grade)
+[![Coverage Status](https://coveralls.io/repos/github/bejo-lang/bejo/badge.svg)](https://coveralls.io/github/bejo-lang/bejo)
 
 A modern programming language from the future, just for fun.
 
@@ -116,7 +117,7 @@ mix deps.get
 iex -S mix
 
 # In the Elixir shell, compile and load a Bejo file using the following:
-> Bejo.Code.load_file("example.bejo")
+> Bejo.Code.load_module("example")
 
 # Now you can run functions from the module like this:
 > :example.sum(40, 2)

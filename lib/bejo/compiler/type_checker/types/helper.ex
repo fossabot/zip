@@ -1,4 +1,4 @@
-defmodule Bejo.Types.Helper do
+defmodule Bejo.Compiler.TypeChecker.Types.Helper do
   @moduledoc """
   Helper functions for dealing with types
   """

@@ -1,7 +1,7 @@
-defmodule Bejo.Parser.Common do
+defmodule Bejo.Compiler.Parser.Common do
   import NimbleParsec
 
-  alias Bejo.Parser.Helper
+  alias Bejo.Compiler.Parser.Helper
 
   keyword =
     choice([
