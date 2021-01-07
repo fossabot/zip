@@ -29,7 +29,8 @@ defmodule Bejo.MixProject do
     [
       {:nimble_parsec, "~> 1.1.0"},
       {:plug_cowboy, "~> 2.0"},
-      {:bakeware, github: "spawnfest/bakeware", tag: "v0.1.0", sparse: "bakeware", runtime: false},
+      {:bakeware,
+       github: "spawnfest/bakeware", tag: "v0.1.0", sparse: "bakeware", runtime: false},
       {:excoveralls, "~> 0.13", only: [:test]}
     ]
   end
