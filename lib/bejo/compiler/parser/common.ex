@@ -3,15 +3,6 @@ defmodule Bejo.Compiler.Parser.Common do
 
   alias Bejo.Compiler.Parser.Helper
 
-  keyword =
-    choice([
-      string("fn"),
-      string("do"),
-      string("end"),
-      string("if"),
-      string("else")
-    ])
-
   horizontal_space =
     choice([
       string("\s"),
@@ -61,8 +52,7 @@ defmodule Bejo.Compiler.Parser.Common do
     |> Helper.to_ast(:module_name)
 
   identifier =
-    lookahead_not(keyword)
-    |> concat(identifier_str)
+    identifier_str
     |> label("identifier")
     |> Helper.to_ast(:identifier)
 
