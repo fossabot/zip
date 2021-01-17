@@ -1,7 +1,7 @@
 ![Zip Logo](https://raw.githubusercontent.com/zip-lang/media/main/logo-128x128.png)
 
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fzip-lang%2Fzip.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fzip-lang%2Fzip?ref=badge_shield)
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3c04af6c37ef43ca958efd9cbed0e1df)](https://www.codacy.com/gh/zip-lang/lang/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zip-lang/lang&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3c04af6c37ef43ca958efd9cbed0e1df)](https://www.codacy.com/gh/zip-lang/zip/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=zip-lang/zip&amp;utm_campaign=Badge_Grade)
 
 A modern programming language from the future, just for fun.
 
@@ -99,7 +99,7 @@ tuple = {"tuple", true}
 record = {foo: 123}
 ```
 
-[example.zp](https://github.com/zip-lang/lang/blob/main/example.zp) has
+[example.zp](https://github.com/zip-lang/zip/blob/main/example.zp) has
 working examples that demonstrate the syntax.
 
 ### Running Zip programs
@@ -184,12 +184,12 @@ by Zip.
 
 ## Contributing
 
-Please make sure to read the [CONTRIBUTING-Guidelines](https://github.com/zip-lang/lang/blob/main/CONTRIBUTING.md) before making a pull request.
+Please make sure to read the [CONTRIBUTING-Guidelines](https://github.com/zip-lang/zip/blob/main/CONTRIBUTING.md) before making a pull request.
 
 Thank you to all the people who already contributed to Zip!
 
-<a href="https://github.com/zip-lang/lang/graphs/contributors">
-  <img src="https://contributors-img.firebaseapp.com/image?repo=zip-lang/lang" />
+<a href="https://github.com/zip-lang/zip/graphs/contributors">
+  <img src="https://contributors-img.firebaseapp.com/image?repo=zip-lang/zip" />
 </a>
 
 ## License
