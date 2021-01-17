@@ -1,3 +1,3 @@
 import Config
 
-config :bejo, :start_cli, true
+config :zip, :start_cli, true

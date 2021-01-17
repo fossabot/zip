@@ -1,10 +1,10 @@
-defmodule Bejo.OperatorsTest do
+defmodule Zip.OperatorsTest do
   use ExUnit.Case, async: true
   alias TestEvaluator, as: TE
   alias TestParser, as: TP
 
   describe "operators precedence" do
-    # Table of all Bejo operators, from higher to lower precedence.
+    # Table of all Zip operators, from higher to lower precedence.
     # Note that we respect Elixir operators precedence.
     #
     # Operator    Associativity   Description                               TODO
@@ -27,9 +27,9 @@ defmodule Bejo.OperatorsTest do
                {:*, {1, 0, 14}},
                [
                  {:integer, {1, 0, 1}, 1},
-                 {:call, {:!, {1, 0, 14}}, [{:identifier, {1, 0, 14}, :something}], "bejo/kernel"}
+                 {:call, {:!, {1, 0, 14}}, [{:identifier, {1, 0, 14}, :something}], "zip/kernel"}
                ],
-               "bejo/kernel"
+               "zip/kernel"
              } == TestParser.expression!("1 * !something")
 
       assert {
@@ -37,10 +37,10 @@ defmodule Bejo.OperatorsTest do
                {:/, {1, 0, 14}},
                [
                  {:call, {:!, {1, 0, 10}}, [{:identifier, {1, 0, 10}, :something}],
-                  "bejo/kernel"},
+                  "zip/kernel"},
                  {:integer, {1, 0, 14}, 2}
                ],
-               "bejo/kernel"
+               "zip/kernel"
              } == TestParser.expression!("!something / 2")
     end
 
@@ -72,11 +72,11 @@ defmodule Bejo.OperatorsTest do
                {:==, {1, 0, 14}},
                [
                  {:call, {:<, {1, 0, 5}}, [{:integer, {1, 0, 1}, 1}, {:integer, {1, 0, 5}, 1}],
-                  "bejo/kernel"},
+                  "zip/kernel"},
                  {:call, {:>, {1, 0, 14}}, [{:integer, {1, 0, 10}, 2}, {:integer, {1, 0, 14}, 2}],
-                  "bejo/kernel"}
+                  "zip/kernel"}
                ],
-               "bejo/kernel"
+               "zip/kernel"
              } == TestParser.expression!("1 < 1 == 2 > 2")
 
       assert {
@@ -84,11 +84,11 @@ defmodule Bejo.OperatorsTest do
                {:!=, {1, 0, 16}},
                [
                  {:call, {:<=, {1, 0, 6}}, [{:integer, {1, 0, 1}, 1}, {:integer, {1, 0, 6}, 1}],
-                  "bejo/kernel"},
+                  "zip/kernel"},
                  {:call, {:>=, {1, 0, 16}},
-                  [{:integer, {1, 0, 11}, 2}, {:integer, {1, 0, 16}, 3}], "bejo/kernel"}
+                  [{:integer, {1, 0, 11}, 2}, {:integer, {1, 0, 16}, 3}], "zip/kernel"}
                ],
-               "bejo/kernel"
+               "zip/kernel"
              } == TestParser.expression!("1 <= 1 != 2 >= 3")
 
       # Then we test == and != actually work
@@ -173,7 +173,7 @@ defmodule Bejo.OperatorsTest do
                {:foo, [], {:type, {1, 0, 6}, :Nothing},
                 [
                   {:identifier, {2, 10, 13}, :x},
-                  {:call, {:-, {3, 14, 19}}, [{:identifier, {3, 14, 19}, :y}], "bejo/kernel"}
+                  {:call, {:-, {3, 14, 19}}, [{:identifier, {3, 14, 19}, :y}], "zip/kernel"}
                 ]}
              } == TestParser.function_def!(str)
     end

@@ -67,12 +67,12 @@ jobs:
       - name: Generate Release
         run: mix release
       - name: Rename Executable
-        run: cp bejo bejo_${{ matrix.os }}
+        run: cp zip zip_${{ matrix.os }}
       - name: Save Executable
         uses: actions/upload-artifact@v2
         with:
-          name: bejo_${{ matrix.os }}
-          path: bejo_${{ matrix.os }}
+          name: zip_${{ matrix.os }}
+          path: zip_${{ matrix.os }}
   publish:
     needs: release
     if: github.ref == 'refs/heads/main'
@@ -81,7 +81,7 @@ jobs:
       - name: Fetch release artifacts
         uses: actions/download-artifact@v2
         with:
-          name: bejo_ubuntu-latest
+          name: zip_ubuntu-latest
       - name: Upload Artifacts
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
@@ -89,4 +89,4 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: true
           title: "Development Build"
-          files: bejo_ubuntu-latest
+          files: zip_ubuntu-latest

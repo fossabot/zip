@@ -1,21 +1,21 @@
-Bejo Syntax Hacking Guide
+Zip Syntax Hacking Guide
 =========================
 
-Changing Bejo's syntax is a 3 step process:
+Changing Zip's syntax is a 3 step process:
 
 1. Update the parser to understand the new syntax
 2. Update the type checker so it can infer types of AST nodes parsed from the new syntax
-3. Update Erl translator to convert the Bejo AST nodes to Erlang abstract format.
+3. Update Erl translator to convert the Zip AST nodes to Erlang abstract format.
 
 These are explained below.
 
 #### 1. Parser
 
-It's the parser's job to read strings containing Bejo code and parse them into
+It's the parser's job to read strings containing Zip code and parse them into
 an Abstract Syntax Tree or return an error if the code is invalid.
-Bejo uses [NimbleParsec](https://github.com/dashbitco/nimble_parsec), a
+Zip uses [NimbleParsec](https://github.com/dashbitco/nimble_parsec), a
 parser library written in Elixir to do this. The code for this can be
-found [here](https://github.com/bejo-lang/bejo/blob/main/lib/bejo/parser.ex)
+found [here](https://github.com/zip-lang/lang/blob/main/lib/zip/parser.ex)
 
 If you write a parser that hangs, you most probably have the "left recursion"
 problem. [Read this](https://web.cs.wpi.edu/~kal/PLT/PLT4.1.2.html)
@@ -27,7 +27,7 @@ to understand how to fix this problem. An example of this is how we're parsing
 The TypeChecker's job is to make sure the function definitions have return
 types in their signature that actually match the types inferred from their body.
 
-The code can be found [here](https://github.com/bejo-lang/bejo/blob/main/lib/bejo/type_checker.ex)
+The code can be found [here](https://github.com/zip-lang/lang/blob/main/lib/zip/type_checker.ex)
 
 Expressions are inferred using a function called `infer_exp(env, exp)`.
 The first argument `env` is the state that's maintained by the type checker.
@@ -42,7 +42,7 @@ implemented the `to_string` function.
 
 #### 3. ErlTranslate
 
-This module is in charge of converting Bejo's AST into Erlang Abstract Format.
+This module is in charge of converting Zip's AST into Erlang Abstract Format.
 Erlang Abstract Format (sometimes called absform or simply forms in code) is
 a [well documented specification](https://erlang.org/doc/apps/erts/absform.html)
 for the Erlang parse tree.
@@ -61,7 +61,7 @@ code
 |> :elixir.quoted_to_erl(:elixir.env_for_eval([]))
 ```
 
-The code for ErlTranslate can be [found here](https://github.com/bejo-lang/bejo/blob/main/lib/bejo/erl_translate.ex).
+The code for ErlTranslate can be [found here](https://github.com/zip-lang/lang/blob/main/lib/zip/erl_translate.ex).
 
 ErlTranslate uses a function `translate_exp(node)` to translate an expression
 into Erlang abstract format.
@@ -69,7 +69,7 @@ into Erlang abstract format.
 #### Documentation and Examples
 
 After you've made all the changes and updated the unit tests, the next job is
-to update the README and the examples in [the example file](https://github.com/bejo-lang/bejo/blob/main/example.zp).
+to update the README and the examples in [the example file](https://github.com/zip-lang/lang/blob/main/example.zp).
 
-The people who work on Bejo are friendly and eager to help. The best place to
+The people who work on Zip are friendly and eager to help. The best place to
 find them is in the Discord server linked in the README.

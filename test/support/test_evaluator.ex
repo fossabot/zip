@@ -1,5 +1,5 @@
 defmodule TestEvaluator do
-  alias Bejo.Compiler.{
+  alias Zip.Compiler.{
     TypeChecker,
     ErlTranslate
   }

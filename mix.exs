@@ -1,7 +1,7 @@
-defmodule Bejo.MixProject do
+defmodule Zip.MixProject do
   use Mix.Project
 
-  @app :bejo
+  @app :zip
 
   def project do
     [
@@ -9,7 +9,7 @@ defmodule Bejo.MixProject do
       version: "0.1.0",
       elixir: "~> 1.10",
       start_permanent: Mix.env() == :prod,
-      escript: [main_module: Bejo.Cli],
+      escript: [main_module: Zip.Cli],
       deps: deps(),
       xref: [exclude: [:router]],
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -27,7 +27,7 @@ defmodule Bejo.MixProject do
 
   # Run "mix help compile.app" to learn about applications.
   def application do
-    [extra_applications: [:logger], mod: {Bejo.Application, []}]
+    [extra_applications: [:logger], mod: {Zip.Application, []}]
   end
 
   # Run "mix help deps" to learn about dependencies.
@@ -45,7 +45,7 @@ defmodule Bejo.MixProject do
     [
       overwrite: true,
       cookie: "#{@app}_cookie",
-      steps: [:assemble, &Bakeware.assemble/1, &Bejo.Deploy.copy_files/1],
+      steps: [:assemble, &Bakeware.assemble/1, &Zip.Deploy.copy_files/1],
       strip_beams: Mix.env() == :prod,
       quiet: true
     ]

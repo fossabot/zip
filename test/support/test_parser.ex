@@ -1,7 +1,7 @@
 defmodule TestParser do
   import NimbleParsec
 
-  alias Bejo.Compiler.Parser.{
+  alias Zip.Compiler.Parser.{
     Common,
     Types,
     Expressions,
