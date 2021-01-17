@@ -36,8 +36,7 @@ defmodule Zip.OperatorsTest do
                :call,
                {:/, {1, 0, 14}},
                [
-                 {:call, {:!, {1, 0, 10}}, [{:identifier, {1, 0, 10}, :something}],
-                  "zip/kernel"},
+                 {:call, {:!, {1, 0, 10}}, [{:identifier, {1, 0, 10}, :something}], "zip/kernel"},
                  {:integer, {1, 0, 14}, 2}
                ],
                "zip/kernel"
