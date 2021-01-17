@@ -2,7 +2,7 @@ defmodule Bejo.Kernel do
   @moduledoc """
   This module right now only has a function named types which returns a map
   of known function types belonging to kernel. In the future, this module will
-  be moved to a .bejo file.
+  be moved to a .zp file.
   """
 
   def types do

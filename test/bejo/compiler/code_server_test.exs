@@ -5,7 +5,7 @@ defmodule Bejo.Compiler.CodeServerTest do
 
   test "when module has a dependency" do
     tmp_dir = System.tmp_dir!()
-    temp_file_1 = Path.join(tmp_dir, "foo.bejo")
+    temp_file_1 = Path.join(tmp_dir, "foo.zp")
 
     str = """
     use bar
@@ -17,7 +17,7 @@ defmodule Bejo.Compiler.CodeServerTest do
 
     File.write!(temp_file_1, str)
 
-    temp_file_2 = Path.join(tmp_dir, "bar.bejo")
+    temp_file_2 = Path.join(tmp_dir, "bar.zp")
 
     str = """
     fn hello : String do
@@ -41,7 +41,7 @@ defmodule Bejo.Compiler.CodeServerTest do
 
   test "when module has a non existent dependency" do
     tmp_dir = System.tmp_dir!()
-    temp_file_1 = Path.join(tmp_dir, "foo.bejo")
+    temp_file_1 = Path.join(tmp_dir, "foo.zp")
 
     str = """
     use bar
@@ -57,7 +57,7 @@ defmodule Bejo.Compiler.CodeServerTest do
       assert {:error,
               [
                 {"foo", {:error, "Type check error"}},
-                {"bar", {:error, "Cannot read file bar.bejo: :enoent"}}
+                {"bar", {:error, "Cannot read file bar.zp: :enoent"}}
               ]} == CodeServer.compile_module("foo")
     end)
 
@@ -66,7 +66,7 @@ defmodule Bejo.Compiler.CodeServerTest do
 
   test "when function does not exist in the dependency module" do
     tmp_dir = System.tmp_dir!()
-    temp_file_1 = Path.join(tmp_dir, "foo.bejo")
+    temp_file_1 = Path.join(tmp_dir, "foo.zp")
 
     str = """
     use bar
@@ -78,7 +78,7 @@ defmodule Bejo.Compiler.CodeServerTest do
 
     File.write!(temp_file_1, str)
 
-    temp_file_2 = Path.join(tmp_dir, "bar.bejo")
+    temp_file_2 = Path.join(tmp_dir, "bar.zp")
 
     str = """
     fn hello_world : String do

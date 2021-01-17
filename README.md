@@ -19,7 +19,7 @@ Here's a quick walkthrough of Bejo's syntax.
 A function in Bejo looks like this:
 
 ```elixir
-# example.bejo
+# example.zp
 fn sum(a: Int, b: Int) : Int do
   a + b
 end
@@ -43,7 +43,7 @@ end
 
 All functions in Bejo are nested inside modules.
 Module names in Bejo are inferred from their file paths, so a Bejo file named
-`example.bejo` will become a module named `example`. All functions inside this
+`example.zp` will become a module named `example`. All functions inside this
 file will belong to this module.
 
 The `sum` function can be called like so:
@@ -99,7 +99,7 @@ tuple = {"tuple", true}
 record = {foo: 123}
 ```
 
-[example.bejo](https://github.com/bejo-lang/bejo/blob/main/example.bejo) has
+[example.zp](https://github.com/bejo-lang/bejo/blob/main/example.zp) has
 working examples that demonstrate the syntax.
 
 ### Running Bejo programs
@@ -129,8 +129,8 @@ iex -S mix
 # Create the executable
 mix escript.build
 
-# Call the function example.sum(1, 2) from the file example.bejo
-./bejo exec --function="sum(1, 2)" example.bejo
+# Call the function example.sum(1, 2) from the file example.zp
+./bejo exec --function="sum(1, 2)" example.zp
 ```
 
 ### Your first HTTP server
@@ -143,7 +143,7 @@ Note: This webserver is a prototype for now and only responds with strings and
 a 200 status code.
 
 ```elixir
-# Inside router.bejo
+# Inside router.zp
 fn routes : List({method: String, path: String, handler: Fn(->String)}) do
   [
     {method: "GET", path: "/", handler: &greet}
@@ -160,10 +160,10 @@ Now start the webserver in one of two ways:
 #### Using Elixir shell
 
 ```
-# router.bejo is in the `examples` folder
+# router.zp is in the `examples` folder
 > Bejo.start("examples")
 
-# Reload routes after changing routes.bejo
+# Reload routes after changing routes.zp
 > Bejo.RouteStore.reload_routes()
 ```
 
@@ -173,10 +173,10 @@ Now start the webserver in one of two ways:
 # Create the executable
 mix escript.build
 
-# router.bejo is in the `examples` folder
+# router.zp is in the `examples` folder
 ./bejo start examples
 
-# Re-run the command after making changes to routes.bejo
+# Re-run the command after making changes to routes.zp
 ```
 
 Now open `http://localhost:6060` in the browser to see "Hello world" served

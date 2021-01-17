@@ -41,7 +41,7 @@ defmodule Bejo.Compiler.ModuleCompiler do
       # Full name of the current module as atom
       module_name: module_atom,
       # Path of module file
-      file: "#{module_atom}.bejo",
+      file: "#{module_atom}.zp",
       # AST which will be created by parser
       ast: nil
     }

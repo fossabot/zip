@@ -69,7 +69,7 @@ into Erlang abstract format.
 #### Documentation and Examples
 
 After you've made all the changes and updated the unit tests, the next job is
-to update the README and the examples in [the example file](https://github.com/bejo-lang/bejo/blob/main/example.bejo).
+to update the README and the examples in [the example file](https://github.com/bejo-lang/bejo/blob/main/example.zp).
 
 The people who work on Bejo are friendly and eager to help. The best place to
 find them is in the Discord server linked in the README.

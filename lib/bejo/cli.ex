@@ -12,7 +12,7 @@ defmodule Bejo.Cli do
     IO.puts("""
     Usage:
       bejo start <directory>
-        Starts the router.bejo file inside <directory>.
+        Starts the router.zp file inside <directory>.
 
       bejo exec [<module> [--function <function_call>]]
         Executes the function call <function_call> inside the module <module>.
@@ -57,8 +57,8 @@ defmodule Bejo.Cli do
       File.cd!(path)
     end
 
-    if not File.exists?("router.bejo") do
-      raise "cannot start webserver: file 'router.bejo' not found in directory '#{path}'"
+    if not File.exists?("router.zp") do
+      raise "cannot start webserver: file 'router.zp' not found in directory '#{path}'"
     end
 
     {:ok, _} = Bejo.Router.start(nil, nil)
